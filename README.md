@@ -1,4 +1,4 @@
-# Analitica-Financiera
+# Analítica Financiera
 
 ## Componentes de una serie financiera
 
@@ -15,9 +15,16 @@ Las series financieras se encuentran compuestas de 2 componentes: uno **sistemá
 * Ruido: variación aleatoria que resulta de la diferencia entre un valor estimado y el observado.
 
 
-**Existen dos metodos para estudiar las series**: Los basados en modelos y los basados en datos.
+**Existen dos metodos para estudiar las series de tiempo**: Los basados en modelos y los basados en datos.
 
-**Los basados en modelos**
+1. **Métodos basados en modelos**
+
+- Emplean modelos estadísticos, matemáticos u otros para aproximarse a los datos de la serie.
+- Los datos de la serie de parten en entrenamiento y prueba, donde los entrenamientos se utilizan para estimar parámetros. Por su parte, los parámetros estimados, sirven para estimar pronósticos. 
+  
+2. **Métodos basados en datos**
+- Metodos que permiten que los algoritmos aprendan de los patrones de los datos.
+- Incluyen métodos de suavizamiento.
 
 
 
