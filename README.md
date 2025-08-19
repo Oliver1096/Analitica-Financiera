@@ -26,7 +26,7 @@ Las series financieras se encuentran compuestas de 2 componentes: uno **sistemá
 - Metodos que permiten que los algoritmos aprendan de los patrones de los datos.
 - Incluyen métodos de suavizamiento.
 
-
+METODOS DE SUAVIZAMIENTO
 
 
   
