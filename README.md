@@ -100,3 +100,19 @@ Finalmente, se suman todos los errores, el resultado se divide en la cantidad de
 **La interpretación del RMSE señala que valores más pequeños del error indican un mejor ajuste. Por ejemplo, un valor del RMSE de 1000 es preferible a uno de 1500 y significa que el modelo presenta un error de 1000 unidades.**
 
 ### MAPE
+
+El error porcentual absoluto medio o MAPE mide la cantidad de error absoluto en términos porcentuales. Es una de las métricas más empleadas para cuantificar el error del pronóstico y específicamente para medir la precisión. Es una medida ampliamente usada debido a su fácil interpretación, por ejemplo, si el MAPE es de 4 significa que el pronóstico tiene un error del 4%. Este criterio se utiliza para comparar diversos modelos pronosticados. Al igual que el RMSE, el error se calcula como la diferencia entre el valor real versus el pronosticado, la única diferencia es que el error no se eleva al cuadrado, sino que se deja en valor absoluto para que la medida sea positiva. 
+
+<p align="center">$Error absoluto = |real_i - observado_i|$</p>
+
+Luego, se divide por los valores reales para dejarlo en términos porcentuales y, finalmente, se divide por el número de observaciones. Así, la expresión para calcular el MAPE es la siguiente: 
+
+$MAPE = \frac{\sum_{i=1}^{n} \frac{|real_i - Pronostico_i|}{real_i}}{n}$
+
+La interpretación del MAPE coincide con la del RMSE; es decir, que valores más pequeños del error indican un mejor ajuste. Para comprender los conceptos, se ilustrarán los criterios mediante un ejemplo, donde se tiene una serie de datos de la cantidad de pasajeros que se transportan en avión. Primero, se realiza un ajuste y pronóstico mediante el método de Suavizado Exponencial Simple cuya función es “ses() en R”.
+
+Luego, se pronostican mediante el método de suavizado exponencial cuya función es “ets() en R” y el resultado de los errores es el siguiente: 
+
+Por lo tanto, el mejor modelo entre el SES y el ETS es el suavizado exponencial, ya que el criterio Akaike es de 1395 comparado contra 1733 del suavizado exponencial simple. Además, el criterio BIC es de 1448 versus 1742. Finalmente, con respecto a los criterios de pronóstico, el método de suavizado exponencial presenta un mejor ajuste ya que tanto el MAPE como el RMSE son menores. Así que el modelo tenga un MAPE de 2.85 significa que el error del modelo es del 2.85% y el RMSE sea de 10.74 significa que el error es de 10.74 pasajeros. 
+
+Como puede verse, los anteriores criterios son útiles para seleccionar el modelo que mejor se ajuste a los datos y, a su vez, la escogencia de cada criterio dependerá del tipo de interpretación que se busque. 
