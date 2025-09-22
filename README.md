@@ -64,3 +64,25 @@ Donde $n$ es el número de periodos a analizar el sesgo del error, ya sea sobre 
 La precisión mide el qué tan separados o qué tanto margen hay entre los valores del pronóstico a los valores reales; este da una idea de la magnitud del error, pero no de su dirección general, como el sesgo. 
 
 Veamos todos estos a continuación.
+
+
+### Criterio AIC
+
+Conocido como Criterio de información de Akaike (AIC). Este se desarrolló tomando como base la teoría de la información y, por consiguiente, sirve para medir la cantidad de información que el investigador perderá si emplea un modelo en particular. De ahí, que el criterio AIC mide qué tan “bien” se ajusta el modelo para un conjunto de datos mediante máxima verosimilitud. La ecuación con la que se calcula el AIC es: 
+
+La teoría de la información es una rama de las matemáticas, que busca cuantificar o medir la información. 
+
+<p align="center">$AIC = 2k - 2ln(L)$</p>
+
+Donde $k$ el número de parámetros estimados o predictores y $L$ es la función de máxima verosimilitud para el modelo estimado.  Así, el mejor modelo es el que tiene menor valor de AIC.
+
+### Criterio BIC
+
+El Criterio de Información Bayesiano (BIC) o también conocido como el criterio de Schwartz, se basa en una medida de evaluación del modelo en términos de sus probabilidades posteriores y, a su vez, está relacionado con el criterio AIC, porque también se ajusta con la función de máxima verosimilitud. Cuando se estima un modelo, puede que el funcionamiento de las probabilidades aumente; por tanto, lo que mide este criterio es qué tan diferentes son las probabilidades; ahora, al igual que ocurre con el criterio AIC, los valores pequeños de BIC corresponden a un *training error* bajo; es decir, que el mejor modelo será aquél con menor BIC. La fórmula para calcular el BIC es:
+
+<p align="center">$BIC = - 2ln(L) + kln(n)$</p>
+
+Donde:
+$k$ es el número de parámetros estimados o predictores, $L$ es la función de máxima verosimilitud para el modelo estimado y $n$ el número de datos. Adicionalmente, cuando se pronostica una serie se emplean métricas, tales como la raíz del error cuadrático medio (RMSE por sus siglas en ingles), o el error porcentual absoluto medio (MAPE por sus siglas en ingles), que son instrumentos útiles cuando de determinar el mejor modelo se trata.
+
+### RMSE
