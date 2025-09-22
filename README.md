@@ -53,3 +53,14 @@ Tenemos por otro lado las métricas de error en el pronóstico. Para ello, defin
 $t + h$ menos el valor real en ese punto (este último, que representa el conjunto de datos reservados para la prueba); quedando:
 
 <p align="center">$e_t = real_i - Observando_i$</p>
+
+Entonces, si, por ejemplo, el modelo genera pronósticos que tienden a sub estimar el resultado, los errores serán positivos y, por el contrario, si el modelo tiende a sobre pronosticar el valor, el error será negativo. 
+
+Existen muchas métricas de error del pronóstico, pero básicamente se clasifican en aquellas que cuantifican el sesgo y la precisión del pronóstico. El sesgo representa el error promedio histórico o el qué tanto el pronóstico de la serie se aleja del valor real (ej. sobre-pronostica, sub-pronostica o pronostica en el promedio de los datos). Este es simplemente el promedio de los errores:
+
+<p align="center">$sesgo = \frac{1}{n} \sum_{t=1}^{n} e_t$</p>
+
+Donde $n$ es el número de periodos a analizar el sesgo del error, ya sea sobre el pronóstico, sobre los datos históricos o la serie completa.
+La precisión mide el qué tan separados o qué tanto margen hay entre los valores del pronóstico a los valores reales; este da una idea de la magnitud del error, pero no de su dirección general, como el sesgo. 
+
+Veamos todos estos a continuación.
