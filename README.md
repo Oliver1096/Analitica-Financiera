@@ -52,4 +52,4 @@ Para elegir el mejor modelo que sirva para describir y pronosticar, se suelen ut
 Tenemos por otro lado las métricas de error en el pronóstico. Para ello, definamos primero qué es el error. El error del pronóstico es la diferencia entre el valor pronosticado a 
 $t + h$ menos el valor real en ese punto (este último, que representa el conjunto de datos reservados para la prueba); quedando:
 
-<p align="center"> e_t = real_i - Observando_i $</p>
+<p align="center">$e_t = real_i - Observando_i$</p>
