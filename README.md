@@ -95,7 +95,7 @@ Luego, se eleva al cuadrado para que la medida siempre sea positiva y además se
 
 Finalmente, se suman todos los errores, el resultado se divide en la cantidad de observaciones y luego se saca la raíz. En general, el RMSE se calcula de la siguiente manera: 
 
-$ RMSE = \sqrt{\sum_{i=0}^{n} \frac{(real_i - Observado_i)^2}{n}}$
+<p align="center">$RMSE = \sqrt{\sum_{i=0}^{n} \frac{(real_i - Observado_i)^2}{n}}$</p>
 
 **La interpretación del RMSE señala que valores más pequeños del error indican un mejor ajuste. Por ejemplo, un valor del RMSE de 1000 es preferible a uno de 1500 y significa que el modelo presenta un error de 1000 unidades.**
 
