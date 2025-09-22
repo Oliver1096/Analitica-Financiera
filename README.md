@@ -43,3 +43,13 @@ Para elegir el mejor modelo que sirva para describir y pronosticar, se suelen ut
 * Métricas dentro de la muestra
 * Métricas de Pronóstico
 * Revisión de los residuales
+
+
+## Métricas de desempeño de Modelos
+
+*Usualmente en modelos supervisados como los de regresión ARIMA, redes neuronales, de suavizamiento exponencial y otros, los datos para el análisis se parten en una sección de entrenamiento o training y en otro de prueba o test, para derivar métricas de error “dentro y fuera de la muestra” o “training and testing”, respectivamente a los datos.*
+
+Tenemos por otro lado las métricas de error en el pronóstico. Para ello, definamos primero qué es el error. El error del pronóstico es la diferencia entre el valor pronosticado a 
+$t + h$ menos el valor real en ese punto (este último, que representa el conjunto de datos reservados para la prueba); quedando:
+
+<p align="center"> e_t = real_i - Observando_i $</p>
