@@ -86,3 +86,17 @@ Donde:
 $k$ es el número de parámetros estimados o predictores, $L$ es la función de máxima verosimilitud para el modelo estimado y $n$ el número de datos. Adicionalmente, cuando se pronostica una serie se emplean métricas, tales como la raíz del error cuadrático medio (RMSE por sus siglas en ingles), o el error porcentual absoluto medio (MAPE por sus siglas en ingles), que son instrumentos útiles cuando de determinar el mejor modelo se trata.
 
 ### RMSE
+
+La raíz del error cuadrático medio (RMSE), también denominada Raíz de la Desviación Cuadrática Media, ayuda a pronosticar el promedio del pronóstico, comparando el valor pronosticado o predicho con el valor real u observado. Esta métrica ha sido muy empleada como métrica estadística estándar para evaluar el desempeño de los modelos, dando un sentido tanto para sesgo como para precisión. Es una de las métricas más empleadas, a pesar de que es muy sensible a valores pronosticados extremos que dan errores mayores (ejemplo, si tenemos un solo valor de error muy alto), penalizará significativamente la métrica, por lo que valores bajos de error, aseguran pronósticos con sesgos bajos. Como se ha comentado, este criterio de selección es pertinente cuando se usa aprendizaje automático supervisado. Para entender mejor la operatividad del RMSE, se va a calcular el error cuadrático medio usando una regresión lineal, sin perjuicio de que pueda ser empleado en otros modelos de pronósticos. Como se muestra en la figura 1, los puntos azules corresponden a los valores reales y la línea roja a los valores arrojados por el modelo de regresión lineal, por lo tanto, el error se grafica con las líneas anaranjadas. 
+
+Luego, se eleva al cuadrado para que la medida siempre sea positiva y además sea derivable. Así, la expresión sería la siguiente: 
+
+<p align="center">$Error Cuadratico = (real_i - Observado_i)^2$</p>
+
+Finalmente, se suman todos los errores, el resultado se divide en la cantidad de observaciones y luego se saca la raíz. En general, el RMSE se calcula de la siguiente manera: 
+
+$ RMSE = \sqrt{\sum_{i=0}^{n} \frac{(real_i - Observado_i)^2}{n}}$
+
+**La interpretación del RMSE señala que valores más pequeños del error indican un mejor ajuste. Por ejemplo, un valor del RMSE de 1000 es preferible a uno de 1500 y significa que el modelo presenta un error de 1000 unidades.**
+
+### MAPE
